@@ -29,7 +29,8 @@ app.configure(configuration(configurationValidator))
 app.use(json())
 app.use(cors({
   origin: [
-    "*", "https://unimed-teste.vercel.app"
+    "*", "https://unimed-teste.vercel.app", "unimed-teste-backend-git-main-davilima0810.vercel.app", "unimed-teste-backend-ls1eumeeo-davilima0810.vercel.app"
+
   ]
 }))
 app.use(urlencoded({ extended: true }))

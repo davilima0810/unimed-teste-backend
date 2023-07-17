@@ -3,7 +3,7 @@
   "port": 3030,
   "public": "./public/",
   "origin": [
-    "*", "https://unimed-teste.vercel.app"
+    "*", "https://unimed-teste.vercel.app", "unimed-teste-backend-git-main-davilima0810.vercel.app", "unimed-teste-backend-ls1eumeeo-davilima0810.vercel.app"
   ],
   "paginate": {
     "default": 10,
