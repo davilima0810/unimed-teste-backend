@@ -20,6 +20,7 @@ import { logError } from './hooks/log-error'
 import { sqlite } from './sqlite'
 import { authentication } from './authentication'
 import { services } from './services/index'
+import { channels } from '@feathersjs/transport-commons'
 
 const app: Application = express(feathers())
 
@@ -37,7 +38,7 @@ app.configure(rest())
 app.configure(sqlite)
 app.configure(authentication)
 app.configure(services)
-// app.configure(channels)
+app.configure(channels)
 
 // Configure a middleware for 404s and the error handler
 app.use(notFound())

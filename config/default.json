@@ -2,13 +2,6 @@
   "host": "localhost",
   "port": 3030,
   "public": "./public/",
-  "origins": [
-    "*",
-    "http://localhost:3030",
-    "https://unimed-teste.vercel.app",
-    "https://unimed-teste-backend-git-main-davilima0810.vercel.app",
-    "https://unimed-teste-backend-ls1eumeeo-davilima0810.vercel.app"
-  ],
   "paginate": {
     "default": 10,
     "max": 50
