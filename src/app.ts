@@ -25,13 +25,13 @@ const app: Application = express(feathers())
 
 // Load app configuration
 app.configure(configuration(configurationValidator))
-app.use(cors())
+// app.use(cors())
 app.use(json())
-// app.use(cors({
-//   origin: [
-//     "*", "https://unimed-teste.vercel.app"
-//   ]
-// }))
+app.use(cors({
+  origin: [
+    "*", "https://unimed-teste.vercel.app"
+  ]
+}))
 app.use(urlencoded({ extended: true }))
 // Host the public folder
 app.use('/', serveStatic(app.get('public')))
