@@ -65,6 +65,7 @@
   "devDependencies": {
     "@feathersjs/cli": "5.0.7",
     "@feathersjs/rest-client": "^5.0.7",
+    "@types/cors": "^2.8.13",
     "@types/mocha": "^10.0.1",
     "@types/node": "^20.4.2",
     "axios": "^1.4.0",
