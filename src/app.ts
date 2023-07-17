@@ -4,13 +4,13 @@ import express, {
   rest,
   json,
   urlencoded,
-  // cors,
+  cors,
   serveStatic,
   notFound,
   errorHandler
 } from '@feathersjs/express'
 
-import cors  from 'cors';
+// import cors  from 'cors';
 import configuration from '@feathersjs/configuration'
 
 import type { Application } from './declarations'
@@ -25,16 +25,8 @@ const app: Application = express(feathers())
 
 // Load app configuration
 app.configure(configuration(configurationValidator))
-// app.use(cors())
+app.use(cors())
 app.use(json())
-app.use(cors({
-  origin: [
-    "*", "https://unimed-teste.vercel.app", "unimed-teste-backend-git-main-davilima0810.vercel.app", "unimed-teste-backend-ls1eumeeo-davilima0810.vercel.app"
-  ],
-  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-  preflightContinue: false,
-  optionsSuccessStatus: 204
-}))
 app.use(urlencoded({ extended: true }))
 // Host the public folder
 app.use('/', serveStatic(app.get('public')))
